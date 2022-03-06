@@ -13,6 +13,9 @@ export default function Home() {
         <link rel="icon" href="/logo-1.png" />
       </Head>
       <Header />
+        <main>
+          
+        </main>
       <Footer />
     </div>
   )
