@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Lorry On Demand</title>
+        <title>Lorry On Demand | Home</title>
         <link rel="icon" href="/logo-1.png" />
       </Head>
       <Header />
