@@ -26,40 +26,43 @@ function Contact() {
             </div>
 
 
-            <form id='contactform' className='rounded-lg bg-white p-2 grid grid-cols-1 md:grid-cols-2  mt-3 w-[98%] md:w-[90%] md:ml-auto md:mr-auto opacity-[0.9]'>
-              <div className="md:mr-2 mb-5">
-                <label htmlFor='Fname'>First Name:<span className='text-red-500 space-y-1'>*</span> </label><br />
-                <input type='text' value={fname} onChange={e => setFname(e.target.value)} name="Fname" aria-required='true' placeholder='Enter your first name'
-                  className='w-full m rounded-md border-2 text-gray-600 p-2' />
-              </div>
+            <form id='contactform' className='relative rounded-lg bg-white p-3 grid mt-3 w-[98%] md:w-[90%] md:ml-auto md:mr-auto opacity-[0.9]'>
+              <div className='grid grid-cols-1 md:grid-cols-2'>
+                <div className="md:mr-2 mb-5">
+                  <label htmlFor='Fname'>First Name:<span className='text-red-500 space-y-1'>*</span> </label><br />
+                  <input type='text' value={fname} onChange={e => setFname(e.target.value)} name="Fname" aria-required='true' placeholder='Enter your first name'
+                    className='w-full m rounded-md border-2 text-gray-600 p-2' />
+                </div>
 
-              <div className="md:ml-2 mb-5">
-                <label htmlFor='Lname'>Last Name:<span className='text-red-500 space-y-1'>*</span> </label><br />
-                <input type='text' value={lname} onChange={e => setLname(e.target.value)} name="Lname" aria-required='true' placeholder='Enter your last name'
-                  className='w-full m rounded-md border-2 text-gray-600 p-2' />
-              </div>
+                <div className="md:ml-2 mb-5">
+                  <label htmlFor='Lname'>Last Name:<span className='text-red-500 space-y-1'>*</span> </label><br />
+                  <input type='text' value={lname} onChange={e => setLname(e.target.value)} name="Lname" aria-required='true' placeholder='Enter your last name'
+                    className='w-full m rounded-md border-2 text-gray-600 p-2' />
+                </div>
 
-              <div className="md:mr-2 mb-5">
-                <label htmlFor='Email'>Email:<span className='text-red-500 space-y-1'>*</span> </label><br />
-                <input type='email' value={mail} onChange={e => setMail(e.target.value)} name="Email" aria-required='true' placeholder='Enter your Email'
-                  className='w-full m rounded-md border-2 text-gray-600 p-2' />
-              </div>
+                <div className="md:mr-2 mb-5">
+                  <label htmlFor='Email'>Email:<span className='text-red-500 space-y-1'>*</span> </label><br />
+                  <input type='email' value={mail} onChange={e => setMail(e.target.value)} name="Email" aria-required='true' placeholder='Enter your Email'
+                    className='w-full m rounded-md border-2 text-gray-600 p-2' />
+                </div>
 
-              <div className="md:ml-2 mb-5">
-                <label htmlFor='number'>Phone Number:<span className='text-red-500 space-y-1'>*</span> </label><br />
-                <input type='tel' value={number} onChange={e => setNumber(e.target.value)} name="number" aria-required='true' placeholder='Enter your phone number'
-                  className='w-full m rounded-md border-2 text-gray-600 p-2' />
+                <div className="md:ml-2 mb-5">
+                  <label htmlFor='number'>Phone Number:<span className='text-red-500 space-y-1'>*</span> </label><br />
+                  <input type='tel' value={number} onChange={e => setNumber(e.target.value)} name="number" aria-required='true' placeholder='Enter your phone number'
+                    className='w-full m rounded-md border-2 text-gray-600 p-2' />
+                </div>
               </div>
 
               <label htmlFor='msg'>Message:<span className='text-red-500 space-y-1'>*</span> </label><br />
               <textarea value={msg} onChange={e => setMsg(e.target.value)} name="msg" form='contactform' cols="30" rows="4" className='rounded-md border-2 text-gray-600 pl-2'>Enter your message here...</textarea>
 
-
-              <br />
-              <button type="submit" className="bg-black rounded-md shadow-x p-2 mt-5 mr-auto ml-auto  text-white active:scale-95 transition transform duration-100">Send Message
-              </button>
+              <div className=' w-full mt-5 mb-3 grid grid-cols-1 '>
+                <button type="submit" className="bg-black w-[10rem] rounded-md shadow-x p-2 ml-auto mr-auto  text-white active:scale-95 transition transform duration-100">Send Message
+                </button>
+              </div>
 
             </form>
+
           </div>
         </main>
         <Footer />
