@@ -51,8 +51,8 @@ function Form() {
         <form className='bg-white m-1 p-1.5 grid grid-cols-1 md:grid-cols-2 pb-5 '>
             <div className="md:mr-2 mb-5">
                 <label htmlFor='source'>From<span className='text-red-500 space-y-1'>*</span> </label><br />
-                <input value={source} onChange={e => setSource(e.target.value)} list="cities" name="source" aria-required='true' placeholder='Source City' className='w-full m rounded-md border-2 text-gray-600 pl-2' />
-                console.log(value);
+                <input type="text" value={source} onChange={e => setSource(e.target.value)} list="cities" name="source" aria-required='true' placeholder='Source City' className='w-full m rounded-md border-2 text-gray-600 pl-2' />
+
                 <datalist id="cities">
                     <option value="Mumbai,MH" />
                     <option value="Nagpur,MH" />
@@ -64,7 +64,7 @@ function Form() {
 
             <div className="md:ml-2 mb-5">
                 <label htmlFor='destination' >To<span className='text-red-500 space-y-1'>*</span></label><br />
-                <input value={destination} onChange={e => setDestination(e.target.value)} list="cities" name="destination" aria-required='true' placeholder='Destination City' className='w-full rounded-md border-2 text-gray-600 pl-2' />
+                <input type="text" value={destination} onChange={e => setDestination(e.target.value)} list="cities" name="destination" aria-required='true' placeholder='Destination City' className='w-full rounded-md border-2 text-gray-600 pl-2' />
                 <datalist id="cities" aria-required='true'>
                     <option value="Mumbai,MH" />
                     <option value="Nagpur,MH" />
@@ -163,7 +163,7 @@ function Form() {
 
             <div className="md:ml-auto md:mr-auto">
                 <br />
-                <button onClick={sendOrder} type="submit" className="bg-orange-400 rounded-md w-[6rem] p-1  mr-auto ml-auto  md:mt-0 text-white active:scale-95 transition transform duration-100">Submit
+                <button onClick={sendOrder} type="submit" value='submit' className="bg-orange-400 rounded-md w-[6rem] p-1  mr-auto ml-auto  md:mt-0 text-white active:scale-95 transition transform duration-100">Submit
                 </button>
             </div>
         </form>
